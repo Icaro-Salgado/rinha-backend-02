@@ -1,5 +1,7 @@
-package com.rinha.backend;
+package com.rinha.backend.controller;
 
+import com.rinha.backend.dto.CreateTransactionDto;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +14,7 @@ public class AccountHolderController {
   @PostMapping("/{account_holder_id}/transacoes")
   ResponseEntity<?> createTransaction(
       @PathVariable("account_holder_id") String accountHolderId,
-      @RequestBody CreateTransactionDto body) {
+      @RequestBody @Valid CreateTransactionDto body) {
 
     return null;
   }
