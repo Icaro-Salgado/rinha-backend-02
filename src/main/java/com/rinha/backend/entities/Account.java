@@ -21,8 +21,8 @@ public class Account {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
-  @Column(name = "limit")
-  private Long limit;
+  @Column(name = "account_limit")
+  private Long account_limit;
 
   @Column(name = "balance")
   private Long balance;
