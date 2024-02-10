@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController("/clientes")
-public class AccountHolderController {
+public class AccountController {
 
-  @PostMapping("/{account_holder_id}/transacoes")
+  @PostMapping("/{account_id}/transacoes")
   ResponseEntity<?> createTransaction(
-      @PathVariable("account_holder_id") String accountHolderId,
-      @RequestBody @Valid CreateTransactionDto body) {
+      @PathVariable("account_id") String accountId, @RequestBody @Valid CreateTransactionDto body) {
 
     return null;
   }
