@@ -17,4 +17,10 @@ public class AccountController {
 
     return null;
   }
+
+  @PostMapping("/{account_id}/extrato")
+  ResponseEntity<?> getBalance(@PathVariable("account_id") String accountId) {
+
+    return null;
+  }
 }
