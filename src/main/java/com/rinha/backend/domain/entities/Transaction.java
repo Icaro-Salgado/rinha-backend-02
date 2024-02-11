@@ -1,6 +1,6 @@
 package com.rinha.backend.domain.entities;
 
-import com.rinha.backend.types.TransactionType;
+import com.rinha.backend.domain.types.TransactionType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

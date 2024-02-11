@@ -1,7 +1,7 @@
 package com.rinha.backend.domain.dto.transaction.create;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.rinha.backend.types.TransactionType;
+import com.rinha.backend.domain.types.TransactionType;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

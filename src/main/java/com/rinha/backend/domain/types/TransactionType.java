@@ -1,4 +1,4 @@
-package com.rinha.backend.types;
+package com.rinha.backend.domain.types;
 
 import lombok.AllArgsConstructor;
 

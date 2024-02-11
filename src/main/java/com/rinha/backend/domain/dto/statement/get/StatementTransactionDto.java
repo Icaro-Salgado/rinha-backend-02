@@ -1,7 +1,7 @@
 package com.rinha.backend.domain.dto.statement.get;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.rinha.backend.types.TransactionType;
+import com.rinha.backend.domain.types.TransactionType;
 import java.time.Instant;
 import lombok.Builder;
 import lombok.Getter;
