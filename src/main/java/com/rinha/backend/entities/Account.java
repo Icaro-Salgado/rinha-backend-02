@@ -22,7 +22,7 @@ public class Account {
   private Integer id;
 
   @Column(name = "account_limit")
-  private Long account_limit;
+  private Long accountLimit;
 
   @Column(name = "balance")
   private Long balance;

@@ -11,15 +11,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.time.Instant;
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 @Setter
 @Getter
+@Builder
 @NoArgsConstructor
 @Entity
 @Table(name = "transactions")
+@AllArgsConstructor
 public class Transaction {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,11 +33,12 @@ public class Transaction {
   @Column(name = "account_id")
   private Integer accountId;
 
+  @CreationTimestamp
   @Column(name = "completed_at")
   private Instant completedAt;
 
   @Enumerated(EnumType.STRING)
-  @Column(name = "type", length = 1)
+  @Column(name = "transactionType", length = 1)
   private TransactionType type;
 
   @Column(name = "description", length = 10)
