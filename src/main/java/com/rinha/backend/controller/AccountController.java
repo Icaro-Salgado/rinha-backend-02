@@ -1,6 +1,8 @@
 package com.rinha.backend.controller;
 
+import com.rinha.backend.domain.dto.statement.get.StatementDto;
 import com.rinha.backend.domain.dto.transaction.create.CreateTransactionDto;
+import com.rinha.backend.domain.dto.transaction.create.CreatedTransactionDto;
 import com.rinha.backend.domain.schema.transaction.create.CreateTransactionSchema;
 import com.rinha.backend.service.statement.GetStatementServiceImpl;
 import com.rinha.backend.service.transaction.create.CreateTransactionService;
@@ -20,7 +22,7 @@ public class AccountController {
   private final GetStatementServiceImpl getStatementService;
 
   @PostMapping("/{account_id}/transacoes")
-  ResponseEntity<?> createTransaction(
+  ResponseEntity<CreatedTransactionDto> createTransaction(
       @PathVariable("account_id") Integer accountId,
       @RequestBody @Valid CreateTransactionDto body) {
 
@@ -35,7 +37,7 @@ public class AccountController {
   }
 
   @PostMapping("/{account_id}/extrato")
-  ResponseEntity<?> getBalance(@PathVariable("account_id") Integer accountId) {
+  ResponseEntity<StatementDto> getBalance(@PathVariable("account_id") Integer accountId) {
 
     return ResponseEntity.ok(getStatementService.execute(accountId));
   }
