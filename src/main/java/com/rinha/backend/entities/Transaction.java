@@ -41,6 +41,9 @@ public class Transaction {
   @Column(name = "transactionType", length = 1)
   private TransactionType type;
 
+  @Column(name = "transaction_value")
+  private Long transactionValue;
+
   @Column(name = "description", length = 10)
   private String description;
 }

@@ -1,4 +1,4 @@
-package com.rinha.backend.dto;
+package com.rinha.backend.dto.transaction.create;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

@@ -1,6 +1,6 @@
 package com.rinha.backend.service.transaction.create;
 
-import com.rinha.backend.dto.CreatedTransactionDto;
+import com.rinha.backend.dto.transaction.create.CreatedTransactionDto;
 import com.rinha.backend.entities.Account;
 import com.rinha.backend.entities.Transaction;
 import com.rinha.backend.exception.InvalidInputException;
@@ -48,6 +48,7 @@ public class CreateTransactionServiceImpl implements CreateTransactionService {
             .accountId(account.getId())
             .type(serviceInput.transactionType())
             .description(serviceInput.description())
+            .transactionValue(serviceInput.value())
             .build();
 
     account.setBalance(balanceAfterOperation);

@@ -10,6 +10,7 @@ CREATE TABLE transactions (
     account_id   INTEGER,
     completed_at TIMESTAMP WITHOUT TIME ZONE,
     type         VARCHAR(1),
+    transaction_value BIGINT,
     description  VARCHAR(10),
     CONSTRAINT pk_transactions PRIMARY KEY (id)
 );
