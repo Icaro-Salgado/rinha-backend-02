@@ -2,6 +2,7 @@ package com.rinha.backend.controller;
 
 import com.rinha.backend.dto.transaction.create.CreateTransactionDto;
 import com.rinha.backend.schema.transaction.create.CreateTransactionSchema;
+import com.rinha.backend.service.statement.GetStatementServiceImpl;
 import com.rinha.backend.service.transaction.create.CreateTransactionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccountController {
 
   private final CreateTransactionService createTransactionService;
+  private final GetStatementServiceImpl getStatementService;
 
   @PostMapping("/{account_id}/transacoes")
   ResponseEntity<?> createTransaction(
@@ -33,8 +35,8 @@ public class AccountController {
   }
 
   @PostMapping("/{account_id}/extrato")
-  ResponseEntity<?> getBalance(@PathVariable("account_id") String accountId) {
+  ResponseEntity<?> getBalance(@PathVariable("account_id") Integer accountId) {
 
-    return null;
+    return ResponseEntity.ok(getStatementService.execute(accountId));
   }
 }
