@@ -38,7 +38,7 @@ public class Transaction {
   private Instant completedAt;
 
   @Enumerated(EnumType.STRING)
-  @Column(name = "transactionType", length = 1)
+  @Column(name = "transaction_type", length = 1)
   private TransactionType type;
 
   @Column(name = "transaction_value")
