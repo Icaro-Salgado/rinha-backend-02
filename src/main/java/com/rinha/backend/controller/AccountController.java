@@ -9,6 +9,7 @@ import com.rinha.backend.service.transaction.create.CreateTransactionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,7 +39,7 @@ public class AccountController {
                 .build()));
   }
 
-  @PostMapping("/{account_id}/extrato")
+  @GetMapping("/{account_id}/extrato")
   ResponseEntity<StatementDto> getBalance(@PathVariable("account_id") Integer accountId) {
 
     return ResponseEntity.ok(getStatementService.execute(accountId));
