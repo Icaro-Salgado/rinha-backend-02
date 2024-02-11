@@ -1,12 +1,12 @@
 package com.rinha.backend.service.transaction.create;
 
-import com.rinha.backend.dto.transaction.create.CreatedTransactionDto;
-import com.rinha.backend.entities.Account;
-import com.rinha.backend.entities.Transaction;
+import com.rinha.backend.domain.create.CreateTransactionSchema;
+import com.rinha.backend.domain.dto.transaction.create.CreatedTransactionDto;
+import com.rinha.backend.domain.entities.Account;
+import com.rinha.backend.domain.entities.Transaction;
 import com.rinha.backend.exception.InvalidInputException;
 import com.rinha.backend.repository.AccountRepository;
 import com.rinha.backend.repository.TransactionRepository;
-import com.rinha.backend.schema.transaction.create.CreateTransactionSchema;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

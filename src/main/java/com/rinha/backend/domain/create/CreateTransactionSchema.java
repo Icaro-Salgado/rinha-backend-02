@@ -1,4 +1,4 @@
-package com.rinha.backend.schema.transaction.create;
+package com.rinha.backend.domain.create;
 
 import com.rinha.backend.types.TransactionType;
 import lombok.Builder;

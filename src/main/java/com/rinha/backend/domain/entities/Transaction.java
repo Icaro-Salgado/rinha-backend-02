@@ -1,4 +1,4 @@
-package com.rinha.backend.entities;
+package com.rinha.backend.domain.entities;
 
 import com.rinha.backend.types.TransactionType;
 import jakarta.persistence.Column;

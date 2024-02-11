@@ -1,10 +1,10 @@
 package com.rinha.backend.service.statement;
 
-import com.rinha.backend.dto.statement.get.StatementBalanceDto;
-import com.rinha.backend.dto.statement.get.StatementDto;
-import com.rinha.backend.dto.statement.get.StatementTransactionDto;
-import com.rinha.backend.entities.Account;
-import com.rinha.backend.entities.Transaction;
+import com.rinha.backend.domain.dto.statement.get.StatementBalanceDto;
+import com.rinha.backend.domain.dto.statement.get.StatementDto;
+import com.rinha.backend.domain.dto.statement.get.StatementTransactionDto;
+import com.rinha.backend.domain.entities.Account;
+import com.rinha.backend.domain.entities.Transaction;
 import com.rinha.backend.repository.AccountRepository;
 import com.rinha.backend.repository.TransactionRepository;
 import jakarta.persistence.EntityNotFoundException;

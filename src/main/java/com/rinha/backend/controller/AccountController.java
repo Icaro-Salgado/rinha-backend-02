@@ -1,7 +1,7 @@
 package com.rinha.backend.controller;
 
-import com.rinha.backend.dto.transaction.create.CreateTransactionDto;
-import com.rinha.backend.schema.transaction.create.CreateTransactionSchema;
+import com.rinha.backend.domain.create.CreateTransactionSchema;
+import com.rinha.backend.domain.dto.transaction.create.CreateTransactionDto;
 import com.rinha.backend.service.statement.GetStatementServiceImpl;
 import com.rinha.backend.service.transaction.create.CreateTransactionService;
 import jakarta.validation.Valid;

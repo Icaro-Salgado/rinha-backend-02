@@ -1,4 +1,4 @@
-package com.rinha.backend.dto.statement.get;
+package com.rinha.backend.domain.dto.statement.get;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;

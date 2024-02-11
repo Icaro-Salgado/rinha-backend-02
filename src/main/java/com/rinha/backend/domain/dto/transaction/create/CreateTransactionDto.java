@@ -1,4 +1,4 @@
-package com.rinha.backend.dto.transaction.create;
+package com.rinha.backend.domain.dto.transaction.create;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.rinha.backend.types.TransactionType;
