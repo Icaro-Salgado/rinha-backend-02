@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.rinha.backend.domain.types.TransactionType;
 import java.time.Instant;
 import lombok.Builder;
-import lombok.Getter;
 
-@Getter
 @Builder
 public record StatementTransactionDto(
     @JsonProperty("valor") Long value,
