@@ -1,6 +1,6 @@
 package com.rinha.backend.domain.create;
 
-import com.rinha.backend.types.TransactionType;
+import com.rinha.backend.domain.types.TransactionType;
 import lombok.Builder;
 
 @Builder
