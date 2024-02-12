@@ -9,6 +9,7 @@ import com.rinha.backend.repository.AccountRepository;
 import com.rinha.backend.repository.TransactionRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
+import java.time.Instant;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -46,6 +47,7 @@ public class CreateTransactionServiceImpl implements CreateTransactionService {
     final var createdTransaction =
         Transaction.builder()
             .accountId(account.getId())
+            .completedAt(Instant.now())
             .type(serviceInput.transactionType())
             .description(serviceInput.description())
             .transactionValue(serviceInput.value())
