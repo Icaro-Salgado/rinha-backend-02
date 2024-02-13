@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   api1: &api
-    image: icarosalgado/rinha-de-backend-2024-q1:latest
+    image: icarosalgado/rinha-de-backend-2024-q1-graalvm
     hostname: api1
     environment:
       - PORT=8080
@@ -13,6 +13,8 @@ services:
       resources:
         limits:
           cpus: "0.5"
+    expose:
+      - "8080"
 #          memory: "200MB"
 
   api2:
