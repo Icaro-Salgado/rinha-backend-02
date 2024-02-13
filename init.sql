@@ -6,12 +6,12 @@ CREATE TABLE accounts (
 );
 
 CREATE TABLE transactions (
+    id SERIAL PRIMARY KEY,
     account_id   INTEGER,
     completed_at TIMESTAMP WITHOUT TIME ZONE,
     transaction_type  VARCHAR(1),
     transaction_value BIGINT,
-    description  VARCHAR(10),
-    CONSTRAINT pk_transactions PRIMARY KEY (account_id)
+    description  VARCHAR(10)
 );
 
 DO $$
