@@ -8,10 +8,11 @@ import com.rinha.backend.exception.InvalidInputException;
 import com.rinha.backend.repository.AccountRepository;
 import com.rinha.backend.repository.TransactionRepository;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
 import java.time.Instant;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
@@ -21,7 +22,7 @@ public class CreateTransactionServiceImpl implements CreateTransactionService {
   private final TransactionRepository transactionRepository;
 
   @Override
-  @Transactional
+  @Transactional(isolation = Isolation.REPEATABLE_READ)
   public CreatedTransactionDto execute(CreateTransactionSchema serviceInput) {
     final var account =
         accountRepository
