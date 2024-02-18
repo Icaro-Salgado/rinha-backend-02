@@ -22,7 +22,7 @@ public class CreateTransactionServiceImpl implements CreateTransactionService {
   private final TransactionRepository transactionRepository;
 
   @Override
-  @Transactional(isolation = Isolation.REPEATABLE_READ)
+  @Transactional(isolation = Isolation.READ_COMMITTED)
   public CreatedTransactionDto execute(CreateTransactionSchema serviceInput) {
     final var account =
         accountRepository

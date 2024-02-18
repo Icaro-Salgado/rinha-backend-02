@@ -24,7 +24,8 @@ public class GetStatementServiceImpl implements GetStatementService {
 
     final var account =
         accountRepository.findById(accountId).orElseThrow(EntityNotFoundException::new);
-    final var accountTransactions = transactionRepository.findByAccountId(accountId);
+    final var accountTransactions =
+        transactionRepository.findTop10ByAccountIdOrderByCompletedAtDesc(accountId);
 
     return StatementDto.builder()
         .balance(buildBalance(account))
