@@ -32,7 +32,7 @@ public class AccountController {
     return ResponseEntity.ok(
         createTransactionService.execute(
             CreateTransactionSchema.builder()
-                .value(body.getValue())
+                .value(Long.valueOf(body.getValue().longValue()))
                 .transactionType(body.getType())
                 .description(body.getDescription())
                 .accountId(accountId)
